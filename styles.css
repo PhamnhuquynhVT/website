@@ -260,6 +260,7 @@ button {
   width: min(100% - 48px, var(--max));
   margin: 0 auto;
   padding: 82px 0;
+  scroll-margin-top: 240px;
 }
 
 .about-section {
@@ -562,20 +563,50 @@ button {
 }
 
 .experience-table {
-  margin-top: 42px;
-  border-top: 1px solid var(--line);
+  margin-top: 68px;
+  border-top: 3px solid rgba(17, 17, 17, 0.28);
 }
 
 .experience-table article {
   display: grid;
-  grid-template-columns: 120px 240px minmax(0, 1fr);
-  gap: 28px;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: 180px 260px minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+  min-height: 150px;
+  padding: 30px 0;
+  border-bottom: 3px solid rgba(17, 17, 17, 0.28);
 }
 
 .experience-table span {
   margin: 0;
+  color: #5f5f5f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.experience-section h2 {
+  max-width: 980px;
+  color: #333333;
+  font-size: clamp(4.6rem, 12vw, 10.5rem);
+}
+
+.experience-table h3 {
+  color: #535353;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.experience-table p {
+  color: #6d6d6d;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .contact-section {
@@ -734,9 +765,17 @@ button {
 
   .section-intro,
   .project-row,
-  .experience-table article,
   .dialog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .experience-table article {
+    grid-template-columns: 120px 190px minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .experience-table p {
+    font-size: 0.74rem;
   }
 
   .dossier,
@@ -821,6 +860,12 @@ button {
 
   .process-grid {
     grid-template-columns: 1fr;
+  }
+
+  .experience-table article {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    min-height: 0;
   }
 
   .contact-links {
