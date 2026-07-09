@@ -217,10 +217,13 @@ button {
   box-shadow: var(--shadow);
 }
 
-.tv-frame .fake-image {
-  min-height: 220px;
-  background: #181818;
-  color: #f5f5ed;
+.tv-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 36%;
+  filter: grayscale(0.22) contrast(1.04);
 }
 
 .tv-frame figcaption {
@@ -304,6 +307,16 @@ button {
 .image-polaroid {
   min-height: 190px;
   transform: rotate(-7deg);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 44px rgba(17, 17, 17, 0.18);
 }
 
 .image-book {
@@ -577,7 +590,7 @@ button {
   border-bottom: 3px solid rgba(17, 17, 17, 0.28);
 }
 
-.experience-table span {
+.experience-table span:not(.school-logo) {
   margin: 0;
   color: #5f5f5f;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -600,6 +613,14 @@ button {
   line-height: 1.15;
 }
 
+.experience-table h3 small {
+  display: block;
+  margin-top: 12px;
+  color: #777777;
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
 .experience-table p {
   color: #6d6d6d;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -607,6 +628,28 @@ button {
   font-weight: 800;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.experience-table .school-logo {
+  display: grid;
+  width: 112px;
+  min-height: 58px;
+  place-items: center;
+  border: 2px solid rgba(17, 17, 17, 0.7);
+  color: var(--ink);
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  font-size: 1.55rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.experience-table .school-logo-lisaa {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.experience-table .school-logo-vnuf {
+  background: var(--sheet);
 }
 
 .contact-section {
