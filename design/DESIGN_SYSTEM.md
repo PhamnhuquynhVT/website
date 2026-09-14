@@ -410,7 +410,7 @@ Both languages live in the same HTML file (no `/fr/` copies, no fetch, works fro
 - CSS hides the inactive language from `<html data-lang>`; with no attribute (JS off) English shows. `styles.css` §23 also cancels the sibling margin a first French paragraph would inherit from its hidden English twin.
 - French typography: a no-break space before `:` and inside « », a narrow no-break space before `; ! ?`.
 
-**Detection** (inline `<script>` in `<head>`, right after `<title>`, before the stylesheet): `localStorage.lang` if it is `fr`/`en`, else `fr` when one of the first two `navigator.languages` starts with `fr` (fr-FR, fr-BE, fr-CH, fr-CA…), else `en`. It sets `lang`, `data-lang` and swaps `document.title`.
+**Detection** (inline `<script>` in `<head>`, right after `<title>`, before the stylesheet): `localStorage.lang` if it is `fr`/`en`, else `fr` when one of the first two `navigator.languages` starts with `fr` (fr-FR, fr-BE, fr-CH, fr-CA…) or ends with the `-FR` region, else `fr` when the device time zone is `Europe/Paris` or `Europe/Monaco` (visitors in France), else `en`. It sets `lang`, `data-lang` and swaps `document.title`.
 
 **Language switch** (masthead, after Contact)
 ```html

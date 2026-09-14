@@ -38,9 +38,12 @@ for both **content** and **visual style**.
   swaps them.
 - Language choice happens in a tiny inline script in `<head>`, before first paint:
   1. a saved choice in `localStorage` (`lang`)
-  2. otherwise auto-detect by region: the first entry of `navigator.languages` starting with `fr`
-     (fr-FR, fr-BE, fr-CH, fr-CA…) gives French
-  3. otherwise English.
+  2. otherwise, if one of the first two `navigator.languages` is French (`fr`, `fr-BE`, `fr-CA`…) or has a
+     France region tag (`en-FR`), use French
+  3. otherwise, if the device time zone is `Europe/Paris` or `Europe/Monaco`, use French. This means
+     visitors in France get French even with an English browser. There is no IP geolocation: the site is
+     static and must not call third-party services.
+  4. otherwise English.
   It sets `<html lang>` and `data-lang`.
 - The `FR / EN` switch in the masthead saves the choice and applies it without reloading.
 - Every text change must be made in both languages. Each project `README.md` holds `## EN` and
