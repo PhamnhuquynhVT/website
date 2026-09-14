@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style Guide — PHAM Nhu Quynh Portfolio</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/brand/phq-seal.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  /* Style-guide-only chrome (prefixed .sg-). Not part of the design system. */
+  .sg-section-head {
+    display: flex; align-items: baseline; gap: var(--space-4); flex-wrap: wrap;
+    padding: var(--space-6) var(--margin) var(--space-3);
+    border-top: 1px dashed rgb(0 0 0 / .25);
+    font-family: var(--font-meta); font-size: var(--step--2); font-weight: 300;
+  }
+  .sg-section-head b { font-family: var(--font-sans); font-stretch: 125%; font-weight: 800; font-size: var(--step-1); }
+  .sg-section-head code { font-size: var(--step--2); background: rgb(0 0 0 / .06); padding: .1em .4em; }
+  .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: var(--space-3); }
+  .sg-swatch { font-family: var(--font-meta); font-size: var(--step--2); font-weight: 300; }
+  .sg-swatch i { display: block; aspect-ratio: 3 / 2; margin-bottom: .4rem; background: var(--c); border: 1px solid rgb(0 0 0 / .08); }
+  .sg-swatch b { display: block; font-family: var(--font-sans); font-stretch: 112%; font-weight: 600; }
+  .sg-type-row { display: grid; gap: var(--space-2) var(--space-4); padding-block: var(--space-4); border-bottom: 1px solid var(--rule); }
+  @media (min-width: 800px) { .sg-type-row { grid-template-columns: 14rem 1fr; align-items: baseline; } }
+  .sg-note { font-family: var(--font-meta); font-size: var(--step--2); font-weight: 300; color: var(--grey-ink); }
+  .sg-space { display: flex; align-items: center; gap: var(--space-3); font-family: var(--font-meta); font-size: var(--step--2); }
+  .sg-space i { display: block; height: .6rem; width: var(--s); background: var(--charcoal); }
+  .sg-lightbox-demo { position: relative; height: 34rem; overflow: hidden; }
+  .sg-lightbox-demo .lightbox { position: absolute; }
+  .sg-grid-demo .cell { min-height: 3rem; background: rgb(239 126 175 / .25); outline: 1px solid rgb(212 94 148 / .4); font-family: var(--font-meta); font-size: var(--step--2); padding: .3rem; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead">
+  <a class="masthead__brand" href="#top">
+    <img class="masthead__seal" src="../assets/brand/phq-seal.svg" width="185" height="214" alt="">
+    <span>PHAM Nhu Quynh</span>
+  </a>
+  <nav class="masthead__nav" aria-label="Issues">
+    <ul class="masthead__list">
+      <li><a class="masthead__link" href="#issue-1" aria-current="true"><b>01</b>Illustration</a></li>
+      <li><a class="masthead__link" href="#issue-2"><b>02</b>Graphic Design</a></li>
+      <li><a class="masthead__link" href="#issue-3"><b>03</b>Typography</a></li>
+      <li><a class="masthead__link" href="#issue-4"><b>04</b>UX-UI</a></li>
+      <li><a class="masthead__link" href="#issue-5"><b>05</b>Photography</a></li>
+    </ul>
+  </nav>
+  <a class="masthead__aside" href="#contact">Contact</a>
+</header>
+
+<main id="main">
+
+<!-- ============ STYLE GUIDE TITLE ============ -->
+<section class="spread" id="top" style="--spread-h:auto">
+  <div class="spread__body grid">
+    <div class="cell" style="--c: 1 / span 8">
+      <p class="sg-note">design/styleguide.html — living style guide for styles.css</p>
+      <h1 class="display display--project" aria-label="Design System">
+        <span class="display__line"><span class="script-cap">D</span><span class="type-cond">ESIGN</span></span>
+        <span class="display__line type-italic">system</span>
+      </h1>
+    </div>
+    <div class="cell body body--sm" style="--c: 9 / span 4; --as: end">
+      Every component the site uses, rendered with real work from <code>projects/</code>.
+      Read <code>design/DESIGN_SYSTEM.md</code> for markup rules. Colour comes from the artwork; the interface stays paper and ink.
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">00</span><span class="folio-bar__strip"><span>Issue 00</span><span>Style Guide</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">01</span></footer>
+</section>
+
+<!-- ============ TOKENS: COLOUR ============ -->
+<div class="sg-section-head"><b>01 Colour</b><span>Paper &amp; ink UI · accents only from artwork · <code>--accent</code> on &lt;body&gt;</span></div>
+<div class="wrap">
+  <div class="sg-swatches">
+    <div class="sg-swatch"><i style="--c:var(--paper)"></i><b>--paper</b>#ededed</div>
+    <div class="sg-swatch"><i style="--c:var(--paper-2)"></i><b>--paper-2</b>#e4e3e1</div>
+    <div class="sg-swatch"><i style="--c:var(--grey)"></i><b>--grey</b>#b1b0af</div>
+    <div class="sg-swatch"><i style="--c:var(--grey-ink)"></i><b>--grey-ink</b>#6e6d6b</div>
+    <div class="sg-swatch"><i style="--c:var(--charcoal)"></i><b>--charcoal</b>#333332</div>
+    <div class="sg-swatch"><i style="--c:var(--charcoal-2)"></i><b>--charcoal-2</b>#2b2b2b</div>
+    <div class="sg-swatch"><i style="--c:var(--ink)"></i><b>--ink</b>#000000</div>
+  </div>
+  <div class="sg-swatches" style="margin-top:var(--space-4)">
+    <div class="sg-swatch"><i style="--c:var(--pink)"></i><b>--pink</b>#ef7eaf · Hermès</div>
+    <div class="sg-swatch"><i style="--c:var(--magenta)"></i><b>--magenta</b>#d45e94 · Goddess</div>
+    <div class="sg-swatch"><i style="--c:var(--orange)"></i><b>--orange</b>#fe763c · Books</div>
+    <div class="sg-swatch"><i style="--c:var(--blue)"></i><b>--blue</b>#009fe3 · Passport</div>
+    <div class="sg-swatch"><i style="--c:var(--blue-deep)"></i><b>--blue-deep</b>#1877b2 · Gangnam</div>
+    <div class="sg-swatch"><i style="--c:var(--red)"></i><b>--red</b>#e2412a · Agent Orange</div>
+    <div class="sg-swatch"><i style="--c:var(--crimson)"></i><b>--crimson</b>#c8323a · Parasite</div>
+    <div class="sg-swatch"><i style="--c:var(--signal-red)"></i><b>--signal-red</b>#e30613 · Britanica</div>
+    <div class="sg-swatch"><i style="--c:var(--royal)"></i><b>--royal</b>#1d1dd8 · Britanica</div>
+    <div class="sg-swatch"><i style="--c:var(--yellow)"></i><b>--yellow</b>#f5c518 · Tarot</div>
+    <div class="sg-swatch"><i style="--c:var(--teal)"></i><b>--teal</b>#4cc4a4 · Tarot</div>
+    <div class="sg-swatch"><i style="--c:var(--jade)"></i><b>--jade</b>#1f8a6f · Photo</div>
+    <div class="sg-swatch"><i style="--c:var(--ochre)"></i><b>--ochre</b>#b98a3e · Autumn</div>
+  </div>
+  <div class="sg-swatches" style="margin-top:var(--space-4)">
+    <div class="sg-swatch"><i style="--c:var(--obang-red)"></i><b>--obang-red</b>Obangsaek</div>
+    <div class="sg-swatch"><i style="--c:var(--obang-green)"></i><b>--obang-green</b>Obangsaek</div>
+    <div class="sg-swatch"><i style="--c:var(--obang-blue)"></i><b>--obang-blue</b>Obangsaek</div>
+    <div class="sg-swatch"><i style="--c:var(--obang-pink)"></i><b>--obang-pink</b>Obangsaek</div>
+    <div class="sg-swatch"><i style="--c:var(--obang-yellow)"></i><b>--obang-yellow</b>Obangsaek</div>
+  </div>
+</div>
+
+<!-- ============ TOKENS: TYPE ============ -->
+<div class="sg-section-head"><b>02 Typography</b><span>Archivo (wdth 62–125) · Imperial Script (initials only) · Space Grotesk 300 (meta)</span></div>
+<div class="wrap">
+  <div class="sg-type-row"><span class="sg-note">.display--issue · --step-5<br>script-cap + type-cond / type-exp type-italic</span>
+    <p class="display display--issue" aria-label="Illustration"><span class="display__line"><span class="script-cap">I</span><span class="type-cond">LLUs</span><span class="issue-pill">Issue 1</span></span><span class="display__line type-exp type-italic">tration</span></p></div>
+  <div class="sg-type-row"><span class="sg-note">Issue 2</span>
+    <p class="display display--issue" aria-label="Graphic Design"><span class="display__line"><span class="script-cap">G</span><span class="type-cond">RAPHIC</span></span><span class="display__line"><span class="issue-pill" style="margin:0 .4em 0 0">Issue 2</span><span class="script-cap">D</span>esign</span></p></div>
+  <div class="sg-type-row"><span class="sg-note">Issue 3</span>
+    <p class="display display--issue" aria-label="Typography"><span class="display__line"><span class="script-cap">T</span><span class="type-cond">YPO-</span><span class="issue-pill">Issue 3</span></span><span class="display__line type-exp type-italic">graphy</span></p></div>
+  <div class="sg-type-row"><span class="sg-note">Issue 4 (web-only title, no opener art in PDF)</span>
+    <p class="display display--issue" aria-label="UX-UI"><span class="display__line"><span class="script-cap">U</span><span class="type-cond">X–</span><span class="issue-pill">Issue 4</span></span><span class="display__line type-exp type-italic">UI</span></p></div>
+  <div class="sg-type-row"><span class="sg-note">Issue 5</span>
+    <p class="display display--issue" aria-label="Photography"><span class="display__line"><span class="script-cap">P</span><span class="type-cond">HOTO</span><span class="issue-pill">Issue 5</span></span><span class="display__line type-exp type-italic">graphy</span></p></div>
+  <div class="sg-type-row"><span class="sg-note">.display--section · --step-3</span>
+    <p class="display display--section"><span class="script-cap">C</span>ontact</p></div>
+  <div class="sg-type-row"><span class="sg-note">.kicker · --step-1 exp italic 700</span><p class="kicker">Vietnamese Folk Tradition</p></div>
+  <div class="sg-type-row"><span class="sg-note">.entry__title · --step-1 exp italic 500</span><p class="entry__title">(001) “Carré Hermès” collection</p></div>
+  <div class="sg-type-row"><span class="sg-note">.label · --step-0 exp 700 accent</span><p class="label" style="--accent:var(--magenta)">Creative Intention</p></div>
+  <div class="sg-type-row"><span class="sg-note">.body · --step-0 wdth 112 · lh 1.28 · 42ch</span><p class="body">Design a collection of three Hermès scarf motifs (20×20 cm each) unified by a common theme, combining storytelling, cultural reference, and artistic refinement in line with Hermès’ design philosophy.</p></div>
+  <div class="sg-type-row"><span class="sg-note">.body--sm .body--justify</span><p class="body body--sm body--justify">I see design as my way of telling stories—stories full of energy, colors, and culture. Growing up in Vietnam, I’ve always been inspired by the richness of Eastern traditions, especially the spirit and heritage of Vietnam that shaped me.</p></div>
+  <div class="sg-type-row"><span class="sg-note">.type-meta · Space Grotesk 300 · 11px</span><p class="type-meta">Adobe InDesign, Adobe Photoshop — Editorial Design &amp; Art Direction</p></div>
+  <div class="sg-type-row"><span class="sg-note">.folio · 300 · --folio-size</span><p class="folio">06 &nbsp; 07</p></div>
+  <div class="sg-type-row"><span class="sg-note">.arrow · --left · --bold · --long · --accent</span>
+    <p style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap"><span class="arrow"></span><span class="arrow arrow--left"></span><span class="arrow arrow--bold"></span><span class="arrow arrow--long"></span><span class="arrow arrow--accent" style="--accent:var(--pink)"></span></p></div>
+</div>
+
+<!-- ============ TOKENS: SPACE & GRID ============ -->
+<div class="sg-section-head"><b>03 Space &amp; grid</b><span>12 columns ≥ 800px (4 below) · <code>.grid</code> + <code>.cell</code> with <code>--c</code>, <code>--mt</code></span></div>
+<div class="wrap" style="display:grid;gap:.5rem;margin-bottom:var(--space-4)">
+  <div class="sg-space"><i style="--s:var(--space-1)"></i>--space-1</div>
+  <div class="sg-space"><i style="--s:var(--space-2)"></i>--space-2</div>
+  <div class="sg-space"><i style="--s:var(--space-3)"></i>--space-3</div>
+  <div class="sg-space"><i style="--s:var(--space-4)"></i>--space-4</div>
+  <div class="sg-space"><i style="--s:var(--space-5)"></i>--space-5</div>
+  <div class="sg-space"><i style="--s:var(--space-6)"></i>--space-6</div>
+  <div class="sg-space"><i style="--s:var(--space-7)"></i>--space-7</div>
+  <div class="sg-space"><i style="--s:var(--space-8)"></i>--space-8</div>
+</div>
+<div class="grid grid--tight sg-grid-demo">
+  <div class="cell" style="--c: 1 / span 5">--c: 1 / span 5</div>
+  <div class="cell" style="--c: 7 / span 6; --mt: 2rem">--c: 7 / span 6; --mt: 2rem</div>
+  <div class="cell" style="--c: 3 / span 4">--c: 3 / span 4</div>
+  <div class="cell" style="--c: 9 / -1">--c: 9 / -1</div>
+</div>
+
+<!-- ============ COVER ============ -->
+<div class="sg-section-head"><b>04 Cover</b><code>.cover</code><span>PDF p1</span></div>
+<header class="cover" aria-label="Cover">
+  <p class="cover__year">2024/2025</p>
+  <p class="cover__title" role="heading" aria-level="2" aria-label="Graphic Design Portfolio by PHAM Nhu Quynh">
+    <span class="cover__line" style="--i:1" data-reveal><span class="script-cap">G</span>raphic</span>
+    <span class="cover__line" style="--i:2.4; --reveal-delay:80ms" data-reveal><span class="script-cap">D</span>esign</span>
+    <span class="cover__line" style="--i:0" data-reveal><span class="script-cap">P</span>ortfolio<span class="cover__by">by</span></span>
+    <span class="cover__line cover__line--name" style="--i:1.6">PHAM Nhu</span>
+    <span class="cover__line cover__line--name" style="--i:3.1">Quynh</span>
+  </p>
+  <div class="cover__foot">
+    <p class="cover__meta">Graphic Design, Illustration,<br>Photography, UX-UI<br><a href="mailto:Quynhpham261097@gmail.com">Quynhpham261097@gmail.com</a></p>
+    <img class="cover__seal" src="../assets/brand/phq-seal.svg" width="185" height="214" alt="PHQ seal logo">
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<div class="sg-section-head"><b>05 About spread</b><code>.spread .spread--fold</code><span>PDF p2</span></div>
+<section class="spread spread--fold" aria-labelledby="about-title">
+  <div class="spread__body grid">
+    <h2 id="about-title" class="visually-hidden">About</h2>
+    <div class="cell about__art" style="--c: 1 / span 7; --r: 1 / span 3">
+      <figure class="media bleed-left" data-reveal="left">
+        <img src="../projects/00-about/images/p02-1.webp" width="1800" height="1021" alt="Black ink illustration of the designer, braids over her shoulder, drawing on a laptop while lying on the floor" loading="lazy">
+      </figure>
+    </div>
+    <div class="cell" style="--c: 8 / span 2"><img class="about__seal" src="../assets/brand/phq-seal.svg" width="185" height="214" alt="PHQ seal logo"></div>
+    <div class="cell" style="--c: 10 / span 3; --mt: 3rem; --js: end"><img class="about__signature" src="../assets/brand/signature.svg" width="261" height="106" alt="Signature of PHAM Nhu Quynh"></div>
+    <div class="cell" style="--c: 9 / span 4">
+      <p class="body body--sm body--justify">I see design as my way of telling stories—stories full of energy, colors, and culture. Growing up in Vietnam, I’ve always been inspired by the richness of Eastern traditions, especially the spirit and heritage of Vietnam that shaped me, and I love blending that with a contemporary, aesthetic touch.</p>
+      <p class="body body--sm body--justify">My design identity is rooted in contrasts: tradition and modernity, playfulness and harmony, vibrancy and depth. Color is my language, cultural richness is my material, and storytelling is the thread that ties everything together.</p>
+      <p class="body body--sm body--justify">I focus on creating design that communicates and builds strong brand identities, particularly for Asian-inspired concepts.</p>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">02</span><span class="folio folio--right">03</span></footer>
+</section>
+
+<!-- ============ ISSUE OPENER ============ -->
+<div class="sg-section-head"><b>06 Issue opener + index entries</b><code>.issue .display--issue .issue-pill .entry</code><span>PDF p3</span></div>
+<section class="issue spread--fold" id="issue-1" aria-labelledby="issue-1-title">
+  <div class="grid issue__index" style="padding-top:0">
+    <h2 id="issue-1-title" class="cell display display--issue" style="--c: 1 / span 6" aria-label="Issue 1: Illustration" data-reveal>
+      <span class="display__line"><span class="script-cap">I</span><span class="type-cond">LLUs</span><span class="issue-pill">Issue 1</span></span>
+      <span class="display__line type-exp type-italic">tration</span>
+    </h2>
+
+    <div class="cell" style="--c: 8 / span 5; --r: 1; --mt: 1rem; --reveal-delay: 100ms" data-reveal>
+      <a class="entry entry--stacked" href="#">
+        <span class="entry__text">
+          <span class="entry__folio entry__folio--cond"><b>P.14</b> [14–15]</span>
+          <span class="entry__title"><span class="entry__num">(003)</span> FRESCO</span>
+          <span class="entry__sub">Traditional Vietnamese Opera</span>
+        </span>
+        <span class="arrow arrow--left arrow--bold" aria-hidden="true"></span>
+        <img class="entry__thumb" src="../projects/01-illustration/03-fresco-hat-boi/images/p08-1.jpg" width="2000" height="2000" alt="" loading="lazy">
+      </a>
+    </div>
+
+    <div class="cell" style="--c: 1 / span 6; --mt: 2rem" data-reveal>
+      <a class="entry" href="#">
+        <span class="entry__text">
+          <span class="entry__folio"><b>P.06</b> [06–09]</span>
+          <span class="entry__title"><span class="entry__num">(001)</span> “Carré Hermès” collection</span>
+          <span class="entry__sub">Vietnamese Folk Pattern</span>
+          <span class="entry__desc">Inspiration from traditional Vietnamese architecture</span>
+        </span>
+        <span class="arrow" aria-hidden="true"></span>
+        <img class="entry__thumb" src="../projects/01-illustration/01-carre-hermes/images/p05-2.webp" width="1800" height="1737" alt="" loading="lazy">
+      </a>
+    </div>
+
+    <div class="cell" style="--c: 7 / span 6; --mt: 5rem; --js: end" data-reveal>
+      <a class="entry" href="#">
+        <span class="entry__text">
+          <span class="entry__folio"><b>P.16</b> [16–19]</span>
+          <span class="entry__title"><span class="entry__num">(004)</span> Traditional Vietnamese Stories</span>
+          <span class="entry__sub">Book Covers</span>
+        </span>
+        <span class="arrow arrow--bold" aria-hidden="true"></span>
+        <img class="entry__thumb" src="../projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-1.webp" width="1371" height="1800" alt="" loading="lazy">
+      </a>
+    </div>
+
+    <div class="cell" style="--c: 1 / span 6" data-reveal>
+      <a class="entry entry--reverse" href="#">
+        <span class="entry__text">
+          <span class="entry__folio entry__folio--cond"><b>P.10</b> [10–13]</span>
+          <span class="entry__title"><span class="entry__num">(002)</span> Comis Strip</span>
+          <span class="entry__sub">Mother Goddess Worship</span>
+          <span class="entry__sub" style="margin-top:0">Vietnamese Folk Religion</span>
+        </span>
+        <span class="arrow arrow--left" aria-hidden="true"></span>
+        <img class="entry__thumb" src="../projects/01-illustration/02-comis-strip-mother-goddess/images/p06-1.jpg" width="1545" height="2000" alt="" loading="lazy">
+      </a>
+    </div>
+
+    <div class="cell" style="--c: 7 / span 6; --mt: 3rem" data-reveal>
+      <a class="entry entry--reverse" href="#">
+        <span class="entry__text">
+          <span class="entry__folio"><b>P.20</b> [20–21]</span>
+          <span class="entry__title"><span class="entry__num">(005)</span> Tarot</span>
+          <span class="entry__sub">Freaky Folklore Monster</span>
+          <span class="entry__desc">Vietnamese Folk Tradition</span>
+        </span>
+        <span class="arrow arrow--long" aria-hidden="true"></span>
+        <img class="entry__thumb" src="../projects/01-illustration/05-tarot-freaky-folklore-monster/images/p11-1.webp" width="1624" height="1800" alt="" loading="lazy">
+      </a>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">04</span><span class="folio-bar__strip"><span>Issue 01</span><span>Illustration</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">05</span></footer>
+</section>
+
+<!-- ============ PROJECT HERO (DARK) ============ -->
+<div class="sg-section-head"><b>07 Project hero — dark spread</b><code>.spread--dark .display--project .bleed-right .bleed-top</code><span>PDF p4 · --accent: var(--pink)</span></div>
+<section class="spread spread--dark spread--fold" style="--accent: var(--pink)" aria-labelledby="hermes-title">
+  <div class="spread__body grid">
+    <div class="cell text-block" style="--c: 1 / span 4" data-reveal>
+      <h3 class="label">Brief</h3>
+      <p class="body">Design a collection of three Hermès scarf motifs (20×20 cm each) unified by a common theme, combining storytelling, cultural reference, and artistic refinement in line with Hermès’ design philosophy.</p>
+    </div>
+    <figure class="cell media bleed-right bleed-top" style="--c: 7 / -1; --r: 1 / span 3">
+      <img src="../projects/01-illustration/01-carre-hermes/images/p04-2.webp" width="1800" height="1738" alt="Pink silk scarf printed with a Lý dynasty dragon, cranes and clouds, hanging in folds" data-lightbox>
+    </figure>
+    <h1 id="hermes-title" class="cell display display--project" style="--c: 1 / span 7; --r: 2; --mt: 2rem; color: var(--accent)" aria-label="“Carré Hermès” Collection — Vietnamese Folk Pattern">
+      <span class="display__line">“<span class="script-cap">C</span><span class="type-cond type-upper">arré</span><span class="display__aside" style="color:var(--fg)">Vietnamese<br>Folk Pattern</span></span>
+      <span class="display__line display__line--indent" style="--indent:1.1em"><span class="script-cap">H</span><span class="type-cond type-upper">ermès</span>”</span>
+      <span class="display__line display__line--indent type-italic" style="--indent:1.3em">Collection</span>
+    </h1>
+    <figure class="cell media media--cutout" style="--c: 2 / span 3; --r: 3; --mt: 1rem">
+      <img src="../projects/01-illustration/01-carre-hermes/images/p04-6.webp" width="1800" height="963" alt="Three square scarves stacked in perspective" loading="lazy">
+    </figure>
+    <div class="cell text-block" style="--c: 5 / span 4; --r: 3; --mt: 4rem; --as: start; position: relative; z-index: 2" data-reveal>
+      <h3 class="label">Intention</h3>
+      <p class="body">Titled “Vietnamese Folk Patterns”, this scarf collection reinterprets traditional Vietnamese architectural motifs through a contemporary lens. Each design captures fragments of cultural heritage, rendered with refined lines and rich symbolism.</p>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">06</span><span class="folio-bar__strip"><span>Issue 01</span><span>Illustration</span><span class="folio-bar__rule"></span></span><span class="arrow arrow--accent" aria-hidden="true" style="margin-left:auto"></span><span class="folio">07</span></footer>
+</section>
+
+<!-- ============ SPLIT: MEDIA PAGE + TEXT PAGE ============ -->
+<div class="sg-section-head"><b>08 Two-page split</b><code>.split .split__page--media .label--arrow</code><span>PDF p6 · --accent: var(--magenta)</span></div>
+<section class="split" style="--accent: var(--magenta)" aria-labelledby="comis-title">
+  <div class="split__page split__page--media" style="--ratio: 3 / 4">
+    <img src="../projects/01-illustration/02-comis-strip-mother-goddess/images/p06-1.jpg" width="1545" height="2000" alt="Symmetrical pink and violet illustration of a Mother Goddess spirit medium surrounded by worshippers" loading="lazy" data-lightbox>
+  </div>
+  <div class="split__page">
+    <h2 id="comis-title" class="display display--project" style="color:var(--accent)" aria-label="Comis Strip — Mother Goddess Worship">
+      <span class="display__line"><span class="script-cap">C</span><span class="type-exp">OMIS</span></span>
+      <span class="display__line display__line--right"><span class="display__aside" style="color:var(--charcoal);vertical-align:.1em;margin:0 .4em 0 0">Mother<br>Goddess<br>Worship</span><span class="script-cap">S</span><span class="type-exp">tRIP</span></span>
+    </h2>
+    <div class="grid grid--flush" style="row-gap:var(--space-5)">
+      <div class="cell" style="--c: 1 / span 3"><h3 class="label label--arrow">Brief <span class="arrow arrow--short" aria-hidden="true" style="color:var(--charcoal)"></span></h3></div>
+      <p class="cell body body--sm" style="--c: 4 / -1">Create an illustrated poster that tells a small story in a single image, such as a trip, a sports match, or a meal, conveying both the event and its emotions visually.</p>
+      <div class="cell text-block" style="--c: 1 / span 6">
+        <h3 class="label">About<br>Mother Goddess Worship</h3>
+        <p class="body body--sm">Đạo Mẫu is a Vietnamese indigenous belief system that honors female deities, focusing on the veneration of the Mother Goddesses of the Three or Four Realms (Heaven, Earth, Water, and Mountains/Forests).</p>
+      </div>
+      <figure class="cell media" style="--c: 8 / -1">
+        <img src="../projects/01-illustration/02-comis-strip-mother-goddess/images/p06-2.jpg" width="1412" height="2000" alt="Line sketch of the Mother Goddess composition" loading="lazy">
+      </figure>
+    </div>
+    <footer class="folio-bar"><span class="folio-bar__strip" style="margin:0"><span>Illustration</span><span class="folio-bar__rule"></span></span><span class="arrow arrow--accent" aria-hidden="true" style="margin-left:auto"></span><span class="folio">11</span></footer>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<div class="sg-section-head"><b>09 Quote on dark</b><code>.quote</code><span>PDF p7</span></div>
+<section class="spread spread--dark" style="--accent: var(--magenta)">
+  <div class="spread__body grid">
+    <div class="cell text-block" style="--c: 2 / span 4" data-reveal>
+      <h3 class="label">Creative Intention</h3>
+      <p class="body body--sm">The idea is Đạo Mẫu (Mother Goddess Worship) through a fusion of tradition and pop-style modernity. Inspired by the Hầu Đồng ritual, the illustration captures a spirit medium mid-transformation—surrounded by worshippers, vibrant costumes, and divine energy.</p>
+    </div>
+    <figure class="cell media" style="--c: 7 / -1; --r: 1 / span 2; opacity: .35">
+      <img src="../projects/01-illustration/02-comis-strip-mother-goddess/images/p07-3.jpg" width="1477" height="2000" alt="" loading="lazy">
+    </figure>
+    <blockquote class="cell quote" style="--c: 1 / span 10; --r: 2; --mt: var(--space-6); position: relative; z-index: 2; max-width: none" data-reveal>
+      <p><span class="quote__mark">“</span><span class="script-cap">T</span>radition helps you understand who you are. It’s beneficial for the next generation to understand tradition in order to develop.”</p>
+      <cite class="quote__cite">— Phạm Ngọc Thái Linh, artist</cite>
+    </blockquote>
+  </div>
+  <footer class="folio-bar"><span class="folio">12</span><span class="folio-bar__strip"><span>Issue 01</span><span></span></span><span class="folio folio--right">13</span></footer>
+</section>
+
+<!-- ============ ACCENT GROUND + COLLAGE ============ -->
+<div class="sg-section-head"><b>10 Accent ground + scattered collage</b><code>.spread--accent .collage</code><span>PDF p9–10 · --accent: var(--orange) · --accent-label: var(--yellow)</span></div>
+<section class="spread spread--accent spread--fold" style="--accent: var(--orange); --accent-ink: #1d1d1b; --accent-label: #ffe14d">
+  <div class="spread__body grid">
+    <div class="cell" style="--c: 1 / span 6">
+      <h2 class="display display--section" style="color:var(--accent-label)"><span class="type-exp">BOOK COVERS</span></h2>
+      <p class="kicker" style="color:#fff">Traditional Vietnamese Stories</p>
+    </div>
+    <div class="cell text-block" style="--c: 1 / span 5" data-reveal>
+      <h3 class="label">Creative Intention</h3>
+      <p class="body body--sm" style="color:#fff">Design book covers for five traditional Vietnamese stories. The goal is to visually capture the essence and cultural significance of each tale through simple yet impactful illustrations and color schemes.</p>
+    </div>
+    <div class="cell collage collage--interactive" style="--c: 1 / -1; --ratio: 24 / 9">
+      <figure class="collage__item" style="--x:1%; --y:4%; --w:17%; --r:-5deg; --z:2" data-reveal="tilt"><img src="../projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-1.webp" width="1371" height="1800" alt="Book cover: The Tale of Kiều" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:19%; --y:22%; --w:17%; --r:4deg; --z:3" data-reveal="tilt" ><img src="../projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-2.webp" width="1371" height="1800" alt="Book cover: Tấm Cám" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:40%; --y:0%; --w:17%; --r:-2deg; --z:1" data-reveal="tilt"><img src="../projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-3.webp" width="1371" height="1800" alt="Book cover: The Legend of Sword Lake" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:60%; --y:20%; --w:17%; --r:7deg; --z:4" data-reveal="tilt"><img src="../projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-4.webp" width="1371" height="1800" alt="Book cover: The Starfruit Tree" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:80%; --y:3%; --w:17%; --r:-6deg; --z:2" data-reveal="tilt"><img src="../projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-5.webp" width="1371" height="1800" alt="Book cover: Gióng" loading="lazy" data-lightbox></figure>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">16</span><span class="folio-bar__strip"><span>Issue 01</span><span>Illustration</span></span><span class="folio folio--right">17</span></footer>
+</section>
+
+<!-- ============ DARK + KICKER + CUTOUTS ============ -->
+<div class="sg-section-head"><b>11 Dark spread · kicker title · cut-out mockups</b><code>.media--cutout</code><span>PDF p11</span></div>
+<section class="spread spread--dark" style="--accent: var(--yellow)">
+  <div class="spread__body grid">
+    <h2 class="cell display display--project" style="--c: 1 / span 12" aria-label="Tarot — Freaky Folklore Monster">
+      <span class="display__line" style="font-size:.62em;color:var(--yellow)"><span class="kicker" style="display:block;font-size:.34em;color:var(--fg);padding-left:40%">Vietnamese Folk Tradition</span>Freaky Folklore Monster</span>
+      <span class="display__line" style="color:var(--teal)"><span class="script-cap">T</span><span class="type-cond">AROT</span></span>
+    </h2>
+    <figure class="cell media media--cutout" style="--c: 2 / span 5; --mt: -3rem" data-reveal>
+      <img src="../projects/01-illustration/05-tarot-freaky-folklore-monster/images/p11-1.webp" width="1624" height="1800" alt="Tarot box and card with a red-haired ghost and a sea serpent" loading="lazy" data-lightbox>
+    </figure>
+    <div class="cell" style="--c: 7 / -1; display:grid; gap: var(--space-5)">
+      <figure class="media media--cutout" data-reveal="right">
+        <img src="../projects/01-illustration/05-tarot-freaky-folklore-monster/images/p11-2.webp" width="1800" height="1240" alt="Five tarot cards fanned out" loading="lazy" data-lightbox>
+      </figure>
+      <p class="body" style="max-width:34ch">This project brings Vietnamese folklore into a contemporary visual language, blending bold colors and striking forms to balance beauty with eeriness.</p>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">20</span><span class="folio-bar__strip"><span>Issue 01</span><span>Illustration</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">21</span></footer>
+</section>
+
+<!-- ============ BLUE ACCENT + SIDE CREDIT ============ -->
+<div class="sg-section-head"><b>12 Side credit</b><code>.side-credit</code><span>PDF p18 · --accent: var(--blue)</span></div>
+<section class="spread spread--accent spread--fold" style="--accent: var(--blue); --accent-ink: #1c1c1b; --accent-label: #f7b6d8" id="issue-2">
+  <p class="side-credit">
+    <span class="side-credit__title">“Passport” of an imaginary country</span>
+    Concept, Visual Identity, Editorial Layout — Group Project · Adobe Lightroom, Adobe Illustrator
+  </p>
+  <div class="spread__body grid">
+    <h2 class="cell display display--project" style="--c: 1 / span 6" aria-label="Passport Project">
+      <span class="display__line"><span class="script-cap">P</span><span class="type-cond">ASSPORT</span></span>
+      <span class="display__line type-italic">Project</span>
+    </h2>
+    <figure class="cell media media--shadow" style="--c: 8 / span 4; --r: 1 / span 2" data-reveal>
+      <img src="../projects/02-graphic-design/02-passport-eunoia/images/p18-1.webp" width="1301" height="1800" alt="Pale pink Eunoia passport cover with a line-drawn swan" loading="lazy" data-lightbox>
+    </figure>
+    <div class="cell text-block" style="--c: 3 / span 4; --as: end" data-reveal>
+      <h3 class="label">Creative Intention</h3>
+      <p class="body body--sm">This project involved designing the house style of an imaginary country through its national passport. Our fictional nation, Eunoia – meaning “beautiful thinking” or “good will” – was developed around a poetic and fairytale-inspired concept.</p>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">34</span><span class="folio-bar__strip"><span>Issue 02</span><span>Graphic Design</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">35</span></footer>
+</section>
+
+<!-- ============ SCATTER ON PAPER ============ -->
+<div class="sg-section-head"><b>13 Scatter on paper</b><code>.collage (no rotation)</code><span>PDF p35 — Cubism portrait</span></div>
+<section class="spread spread--fold" id="issue-5">
+  <div class="spread__body">
+    <div class="collage collage--interactive" style="--ratio: 1440 / 780">
+      <figure class="collage__item" style="--x:0%; --y:0%; --w:9%" data-reveal="fade"><img src="../projects/05-photography/01-cubism-portrait/images/p35-1.jpg" width="1531" height="2000" alt="Portrait lit in red and teal with a match in her mouth" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:16%; --y:13%; --w:12%" data-reveal="fade"><img src="../projects/05-photography/01-cubism-portrait/images/p35-2.jpg" width="1454" height="2000" alt="Close-up of lips holding a burning match" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:6%; --y:56%; --w:6%" data-reveal="fade"><img src="../projects/05-photography/01-cubism-portrait/images/p35-5.jpg" width="1060" height="2000" alt="Profile in shadow" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:29%; --y:64%; --w:14%" data-reveal="fade"><img src="../projects/05-photography/01-cubism-portrait/images/p35-6.jpg" width="2000" height="1494" alt="Portrait with eyes closed, hands in hair" loading="lazy" data-lightbox></figure>
+      <figure class="collage__item" style="--x:50%; --y:0%; --w:30%; --z:2" data-reveal><img src="../projects/05-photography/01-cubism-portrait/images/p36-1.jpg" width="1806" height="2000" alt="Final fragmented cubist portrait assembled from several shots" loading="lazy" data-lightbox></figure>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">68</span><span class="folio folio--right">71</span></footer>
+</section>
+
+<!-- ============ PHOTO WALL ============ -->
+<div class="sg-section-head"><b>14 Photo wall</b><code>.photo-wall (--c, --r)</code><span>PDF p37 — Autumn theme</span></div>
+<section class="spread">
+  <div class="spread__body">
+    <div class="photo-wall" style="--row: 2.6vw">
+      <figure class="photo-wall__item" style="--c: 1 / span 2;  --r: 3 / span 7"><img src="../projects/05-photography/02-autumn-theme/images/p37-1.jpg" width="1391" height="2000" alt="Ivy-covered shopfront" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 3 / span 2;  --r: 1 / span 7"><img src="../projects/05-photography/02-autumn-theme/images/p37-2.jpg" width="1448" height="2000" alt="Green shutters under ivy" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 5 / span 3;  --r: 3 / span 6"><img src="../projects/05-photography/02-autumn-theme/images/p37-3.jpg" width="2000" height="1334" alt="Red Mini in front of a Haussmann building" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 7 / span 4;  --r: 1 / span 5; --z:2"><img src="../projects/05-photography/02-autumn-theme/images/p37-6.jpg" width="2000" height="1284" alt="Window framed by autumn ivy" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 11 / span 2; --r: 1 / span 7"><img src="../projects/05-photography/02-autumn-theme/images/p37-4.jpg" width="1335" height="2000" alt="Yellow chairs" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 2 / span 2;  --r: 9 / span 6; --z:2"><img src="../projects/05-photography/02-autumn-theme/images/p37-5.jpg" width="1336" height="2000" alt="Paris street corner with trees" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 4 / span 3;  --r: 11 / span 5"><img src="../projects/05-photography/02-autumn-theme/images/p37-7.jpg" width="1318" height="2000" alt="Dry ornamental grasses" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 9 / span 2;  --r: 6 / span 8"><img src="../projects/05-photography/02-autumn-theme/images/p37-9.jpg" width="1398" height="2000" alt="Façade with blue shutters and ivy" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 7 / span 2;  --r: 9 / span 6"><img src="../projects/05-photography/02-autumn-theme/images/p37-10.jpg" width="1335" height="2000" alt="Statue among red ivy" loading="lazy" data-lightbox></figure>
+      <figure class="photo-wall__item" style="--c: 11 / span 2; --r: 10 / span 6"><img src="../projects/05-photography/02-autumn-theme/images/p37-11.jpg" width="1318" height="2000" alt="Stone building detail" loading="lazy" data-lightbox></figure>
+    </div>
+  </div>
+  <footer class="folio-bar"><span class="folio">72</span><span class="folio-bar__strip"><span>Issue 05</span><span>Photography</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">73</span></footer>
+</section>
+
+<!-- ============ PAGER ============ -->
+<div class="sg-section-head"><b>15 Prev / next project</b><code>.pager</code></div>
+<nav class="pager" aria-label="More projects">
+  <a class="pager__link pager__link--prev" href="#">
+    <span class="pager__dir"><span class="arrow arrow--left" aria-hidden="true"></span>Previous</span>
+    <span class="pager__title"><span class="entry__num">(001)</span> “Carré Hermès” collection</span>
+    <span class="pager__issue">Issue 01 — Illustration</span>
+    <img class="pager__thumb" src="../projects/01-illustration/01-carre-hermes/images/p05-1.webp" width="1800" height="1736" alt="" loading="lazy">
+  </a>
+  <a class="pager__link pager__link--next" href="#">
+    <span class="pager__dir">Next<span class="arrow" aria-hidden="true"></span></span>
+    <span class="pager__title"><span class="entry__num">(003)</span> FRESCO</span>
+    <span class="pager__issue">Issue 01 — Illustration</span>
+    <img class="pager__thumb" src="../projects/01-illustration/03-fresco-hat-boi/images/p08-1.jpg" width="2000" height="2000" alt="" loading="lazy">
+  </a>
+</nav>
+
+<!-- ============ LIGHTBOX (static demo) ============ -->
+<div class="sg-section-head"><b>16 Lightbox</b><code>.lightbox</code><span>static preview — click any artwork above to open the real one</span></div>
+<div class="sg-lightbox-demo">
+  <div class="lightbox is-open" role="dialog" aria-label="Lightbox preview">
+    <span class="lightbox__count">02/05</span>
+    <button class="lightbox__close" type="button">Close</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image"><span class="arrow arrow--left" aria-hidden="true"></span></button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" src="../projects/02-graphic-design/06-parasite-poster/images/p24-2.jpg" width="1415" height="2000" alt="Parasite movie poster with split PARA / SITE block letters" loading="lazy">
+      <figcaption class="lightbox__caption">Movie Poster — Parasite</figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image"><span class="arrow" aria-hidden="true"></span></button>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="sg-section-head"><b>17 Contact + site footer</b><code>.contact .site-footer</code><span>PDF p39–40</span></div>
+<section class="spread spread--dark contact" id="contact" aria-labelledby="contact-title" style="--spread-h: auto">
+  <div class="spread__body grid" style="padding-block: var(--space-6)">
+    <h2 id="contact-title" class="cell display display--issue" style="--c: 1 / span 7">
+      <span class="display__line"><span class="script-cap">C</span><span class="type-cond">ONTACT</span></span>
+    </h2>
+    <div class="cell" style="--c: 9 / -1; --as: end; --js: end"><img class="contact__seal" src="../assets/brand/phq-seal.svg" width="185" height="214" alt="PHQ seal logo"></div>
+    <div class="cell" style="--c: 1 / -1">
+      <a class="contact__email" href="mailto:Quynhpham261097@gmail.com">Quynhpham261097@gmail.com</a>
+    </div>
+    <ul class="cell meta-list" style="--c: 1 / span 6">
+      <li>Graphic Design</li><li>Illustration</li><li>Photography</li><li>UX-UI</li>
+    </ul>
+  </div>
+  <footer class="folio-bar"><span class="folio">76</span><span class="folio-bar__strip"><span>PHAM Nhu Quynh</span><span>Portfolio 2024/2025</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">77</span></footer>
+</section>
+</main>
+
+<footer class="site-footer">
+  <img class="site-footer__signature" src="../assets/brand/signature.svg" width="261" height="106" alt="Signature of PHAM Nhu Quynh">
+  <div class="site-footer__bottom">
+    <span>© 2025 PHAM Nhu Quynh — Graphic Design Portfolio</span>
+    <a href="#top">Back to cover ↑</a>
+  </div>
+</footer>
+
+<!-- Real lightbox (enhancement) -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <span class="lightbox__count"></span>
+  <button class="lightbox__close" type="button">Close</button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image"><span class="arrow arrow--left" aria-hidden="true"></span></button>
+  <figure class="lightbox__figure"><img class="lightbox__img" alt=""><figcaption class="lightbox__caption"></figcaption></figure>
+  <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image"><span class="arrow" aria-hidden="true"></span></button>
+</div>
+
+<script>
+/* Style-guide demo only: reference behaviour for script.js (reveal, masthead state, lightbox). */
+(function () {
+  var reveal = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-revealed'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -40px 0px' });
+    reveal.forEach(function (el) { io.observe(el); });
+  } else { reveal.forEach(function (el) { el.classList.add('is-revealed'); }); }
+
+  var mast = document.querySelector('.masthead');
+  addEventListener('scroll', function () { mast.classList.toggle('is-scrolled', scrollY > 8); }, { passive: true });
+
+  var box = document.querySelector('.lightbox[hidden]');
+  var items = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox]'));
+  var img = box.querySelector('.lightbox__img'), cap = box.querySelector('.lightbox__caption'), count = box.querySelector('.lightbox__count');
+  var i = 0, last = null;
+  function show(n) {
+    i = (n + items.length) % items.length;
+    img.src = items[i].currentSrc || items[i].src; img.alt = items[i].alt;
+    cap.textContent = items[i].alt;
+    count.textContent = String(i + 1).padStart(2, '0') + '/' + String(items.length).padStart(2, '0');
+  }
+  function open(n) { last = document.activeElement; show(n); box.hidden = false; requestAnimationFrame(function () { box.classList.add('is-open'); }); box.querySelector('.lightbox__close').focus(); }
+  function close() { box.classList.remove('is-open'); setTimeout(function () { box.hidden = true; }, 300); if (last) last.focus(); }
+  items.forEach(function (el, n) { el.addEventListener('click', function () { open(n); }); });
+  box.querySelector('.lightbox__close').addEventListener('click', close);
+  box.querySelector('.lightbox__nav--prev').addEventListener('click', function () { show(i - 1); });
+  box.querySelector('.lightbox__nav--next').addEventListener('click', function () { show(i + 1); });
+  addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
+</body>
+</html>

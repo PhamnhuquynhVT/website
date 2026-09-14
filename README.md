@@ -1,30 +1,38 @@
-# Quỳnh Phạm Portfolio
+# PHAM Nhu Quynh — Graphic Design Portfolio
 
-A static personal portfolio for a graphic design student preparing for UX/UI master's study.
+Personal portfolio website of PHAM Nhu Quynh (illustration, graphic design, typography, UX-UI and photography),
+designed as an editorial art magazine. The content and visual style come from `PORTFOLIO_PHAM_Nhu_Quynh.pdf`.
+
+Plain HTML, CSS and vanilla JS. There is no framework, package manager or build step.
+
+The site is bilingual (English / French): both languages live in each page, the language follows the visitor's browser (French for `fr-*`), and the `FR / EN` switch in the masthead remembers the choice. See `design/DESIGN_SYSTEM.md` §6b.
 
 ## Open locally
 
-Open `index.html` directly in a browser. No build step, framework, or domain is required.
+- Double-click `index.html`. The site works from `file://`, and every path is relative.
+- Or serve the folder with `python3 -m http.server 8000` and open http://localhost:8000.
 
-## Edit content
+## Where things live
 
-- Update the main page copy in `index.html`.
-- Update case study details in `script.js`.
-- Replace `assets/hero-studio.png` with your own exported portfolio image or Figma mockup.
-- Replace placeholder contact links in the contact section before publishing.
+| Path | What |
+|---|---|
+| `index.html` | Home: cover, about, the five Issue openers with the project index, contact |
+| `projects/<NN-issue>/<NN-project>/index.html` | One case study page per project |
+| `projects/**/README.md` | Content source for each project (copy, tags, tools, image list) |
+| `projects/**/images/` | Artwork extracted from the PDF (use these on pages) |
+| `projects/**/pages/` | PDF spreads rendered as JPG (layout reference only) |
+| `styles.css` | The design system: tokens, type, grid and components |
+| `script.js` | Progressive enhancement: reveal on scroll, masthead state, lightbox |
+| `design/DESIGN_SYSTEM.md` | Component markup, page templates and per-project art direction |
+| `design/styleguide.html` | Living style guide for `styles.css` |
+| `assets/` | Favicon, brand marks (`brand/`) and paper textures (`source/`) |
 
-## Figma workflow
+## Add a project
 
-The Figma plugin is installed for this Codex workspace. To connect the design:
+1. Create `projects/<NN-issue>/<NN-slug>/` with `README.md`, `images/` and `pages/`, following an existing project.
+2. Write its `index.html` from the Project template in `design/DESIGN_SYSTEM.md`. Set `--accent` on `<body>`,
+   link `../../../styles.css` and `../../../script.js`, and give every image `width`, `height` and `alt`.
+3. Add an index entry to its Issue section in `index.html`.
+4. Update the previous/next pager links on the neighbouring project pages.
 
-1. Share a Figma design URL with a specific frame or node selected.
-2. I can read the frame, extract design context, and adapt this website to match it.
-3. If you want to design from the website first, I can also push the current page into a Figma file after you provide or create a Figma file.
-
-## Domain note
-
-You do not need a domain to continue designing. The site can be previewed locally now, published later on a static host, and connected to a custom domain when you are ready.
-
-## Image asset
-
-The current hero image was generated as a placeholder studio collage for this project. Replace it with your real project photography, Figma exports, or final case study visuals before using the site as a finished portfolio.
+Read `CLAUDE.md` for the full rules (source of truth, stack constraints, design language).

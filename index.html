@@ -1,224 +1,160 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Portfolio of Quynh Pham, a graphic design student preparing for UX/UI master's study."
-    >
-    <title>Quynh Pham | Graphic Design & UX/UI Portfolio</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#work">Skip to work</a>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-fr-title="PHAM Nhu Quynh — Portfolio de design graphique 2024/2025">PHAM Nhu Quynh — Graphic Design Portfolio 2024/2025</title>
+<script>(function(d){var l=null;try{l=localStorage.getItem('lang')}catch(e){}if(l!=='fr'&&l!=='en'){l='en';var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''];for(var i=0;i<n.length&&i<2;i++){if(/^fr(-|$)/i.test(n[i]||'')){l='fr';break}}}d.lang=l;d.setAttribute('data-lang',l);d.classList.add('js');var t=document.querySelector('title[data-fr-title]');if(t){t.setAttribute('data-en-title',t.textContent);if(l==='fr')document.title=t.getAttribute('data-fr-title')}})(document.documentElement);</script>
+<meta name="description" content="Graphic design portfolio of PHAM Nhu Quynh: illustration, graphic design, typography, UX-UI and photography." data-fr-content="Portfolio de design graphique de PHAM Nhu Quynh : illustration, design graphique, typographie, UX-UI et photographie.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Imperial+Script&family=Space+Grotesk:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main"><span data-l="en" lang="en">Skip to content</span><span data-l="fr" lang="fr">Aller au contenu</span></a>
+<header class="masthead" id="top">
+  <a class="masthead__brand" href="#top"><img class="masthead__seal" src="assets/brand/phq-seal.svg" width="185" height="214" alt="">PHAM Nhu Quynh</a>
+  <nav class="masthead__nav" aria-label="Issues" data-fr-aria-label="Numéros"><ul class="masthead__list"><li><a class="masthead__link" href="#issue-1"><b>01</b>Illustration</a></li><li><a class="masthead__link" href="#issue-2"><b>02</b><span data-l="en" lang="en">Graphic Design</span><span data-l="fr" lang="fr">Design graphique</span></a></li><li><a class="masthead__link" href="#issue-3"><b>03</b><span data-l="en" lang="en">Typography</span><span data-l="fr" lang="fr">Typographie</span></a></li><li><a class="masthead__link" href="#issue-4"><b>04</b>UX-UI</a></li><li><a class="masthead__link" href="#issue-5"><b>05</b><span data-l="en" lang="en">Photography</span><span data-l="fr" lang="fr">Photographie</span></a></li></ul></nav>
+  <a class="masthead__aside" href="#contact">Contact</a>
+  <div class="lang-switch" role="group" aria-label="Language" data-fr-aria-label="Langue"><button class="lang-switch__btn" type="button" data-set-lang="fr" lang="fr" aria-pressed="false">FR</button><span class="lang-switch__sep" aria-hidden="true">/</span><button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-pressed="true">EN</button></div>
+</header>
 
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Quynh Pham home">
-        <span class="brand-mark" aria-hidden="true">QP</span>
-        <span>QUYNH<br>PHAM</span>
-      </a>
-      <div class="header-note" aria-label="Current location">
-        <strong>Currently</strong>
-        <span>Graphic design student</span>
-      </div>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#work">+ Work</a>
-        <a href="#experience">+ Experience</a>
-        <a href="#contact">Contact ↗</a>
-      </nav>
-    </header>
+<main id="main">
+<section class="cover" aria-labelledby="cover-title">
+  <p class="cover__year">2024/2025</p>
+  <h1 id="cover-title" class="cover__title" aria-label="Graphic Design Portfolio by PHAM Nhu Quynh" data-fr-aria-label="Portfolio de design graphique par PHAM Nhu Quynh">
+    <span class="cover__line" style="--i: 1" data-l="en" lang="en"><span class="script-cap">G</span>raphic</span>
+    <span class="cover__line" style="--i: 2.4" data-l="en" lang="en"><span class="script-cap">D</span>esign</span>
+    <span class="cover__line" style="--i: 0" data-l="en" lang="en"><span class="script-cap">P</span>ortfolio<span class="cover__by">by</span></span>
+    <span class="cover__line" style="--i: 0" data-l="fr" lang="fr"><span class="script-cap">P</span>ortfolio</span>
+    <span class="cover__line" style="--i: 1.4" data-l="fr" lang="fr">de <span class="script-cap">D</span>esign</span>
+    <span class="cover__line" style="--i: .5" data-l="fr" lang="fr"><span class="script-cap">G</span>raphique<span class="cover__by">par</span></span>
+    <span class="cover__line cover__line--name" style="--i: 1.6">PHAM Nhu</span>
+    <span class="cover__line cover__line--name" style="--i: 3.1">Quynh</span>
+  </h1>
+  <div class="cover__foot">
+    <p class="cover__meta"><span data-l="en" lang="en">Graphic Design, Illustration,<br>Photography, UX-UI</span><span data-l="fr" lang="fr">Design graphique, illustration,<br>photographie, UX-UI</span><br><a href="mailto:Quynhpham261097@gmail.com">Quynhpham261097@gmail.com</a></p>
+    <img src="assets/brand/phq-seal.svg" width="185" height="214" alt="PHQ seal logo" data-fr-alt="Logo sceau PHQ" class="cover__seal" fetchpriority="high" decoding="async">
+  </div>
+</section>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-meta">
-          <p>Portfolio V1.0</p>
-          <p>2026</p>
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow">Graphic design / UX UI direction</p>
-          <h1 id="hero-title">Hey, I'm Quynh Pham<br><span>Graphic Designer</span></h1>
-          <p>
-            I build visual systems, editorial layouts, brand identities, and UX/UI case studies.
-            This portfolio is a working archive for master's applications, design experiments,
-            and the stories behind each project.
-          </p>
-        </div>
+<section class="spread spread--fold" id="about" aria-labelledby="about-title">
+  <div class="spread__body grid">
+    <h2 id="about-title" class="visually-hidden"><span data-l="en" lang="en">About</span><span data-l="fr" lang="fr">À propos</span></h2>
+    <div class="cell" style="--c: 3 / span 2; --r: 1"><img src="assets/brand/phq-seal.svg" width="185" height="214" alt="PHQ seal logo" data-fr-alt="Logo sceau PHQ" class="about__seal" loading="lazy" decoding="async"></div>
+    <div class="cell" style="--c: 9 / span 4; --r: 1; --as: end; --js: center"><img src="assets/brand/signature.svg" width="261" height="106" alt="Signature of PHAM Nhu Quynh" data-fr-alt="Signature de PHAM Nhu Quynh" class="about__signature" loading="lazy" decoding="async"></div>
+    <figure class="cell media about__art bleed-left" style="--c: 1 / span 7; --r: 2" data-reveal="left">
+      <img src="projects/00-about/images/p02-1.webp" width="1800" height="1021" alt="Black ink illustration of the designer lying on the floor in a long dark tunic, braids over her shoulders, typing on a laptop" data-fr-alt="Illustration à l’encre noire de la designer allongée au sol dans une longue tunique sombre, tresses sur les épaules, tapant sur un ordinateur portable" loading="lazy" decoding="async">
+    </figure>
+    <div class="cell" style="--c: 9 / span 4; --r: 2" data-reveal>
+      <p class="body body--sm body--justify" data-l="en" lang="en">I see design as my way of telling stories—stories full of energy, colors, and culture. Growing up in Vietnam, I’ve always been inspired by the richness of Eastern traditions, especially the spirit and heritage of Vietnam that shaped me, and I love blending that with a contemporary, aesthetic touch.</p><p class="body body--sm body--justify" data-l="fr" lang="fr">Pour moi, le design est une façon de raconter des histoires — des histoires pleines d’énergie, de couleurs et de culture. J’ai grandi au Vietnam, et la richesse des traditions orientales m’a toujours inspirée, en particulier l’esprit et l’héritage vietnamiens qui m’ont façonnée. J’aime les marier à une touche contemporaine et esthétique.</p>
+      <p class="body body--sm body--justify" data-l="en" lang="en">My design identity is rooted in contrasts: tradition and modernity, playfulness and harmony, vibrancy and depth. Color is my language, cultural richness is my material, and storytelling is the thread that ties everything together. I especially enjoy drawing from Vietnamese folk elements and cultural motifs, reimagining them in new, modern contexts.</p><p class="body body--sm body--justify" data-l="fr" lang="fr">Mon identité de designer repose sur les contrastes : tradition et modernité, espièglerie et harmonie, éclat et profondeur. La couleur est mon langage, la richesse culturelle ma matière, et la narration le fil qui relie le tout. J’aime tout particulièrement puiser dans les éléments du folklore et les motifs culturels vietnamiens pour les réinventer dans des contextes nouveaux et modernes.</p>
+      <p class="body body--sm body--justify" data-l="en" lang="en">I focus on creating design that communicates and builds strong brand identities, particularly for Asian-inspired concepts. By blending Eastern sensibilities with contemporary aesthetics, I develop visual identities that are both distinctive and culturally resonant. My approach to branding goes beyond aesthetics, aiming to create meaningful and cohesive brand experiences that connect emotionally with audiences.</p><p class="body body--sm body--justify" data-l="fr" lang="fr">Je conçois un design qui communique et construit des identités de marque fortes, en particulier pour des concepts d’inspiration asiatique. En mariant sensibilité orientale et esthétique contemporaine, je développe des identités visuelles à la fois singulières et porteuses de sens. Mon approche du branding va au-delà de l’esthétique : elle vise à créer des expériences de marque cohérentes et signifiantes, qui touchent le public.</p>
+    </div>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio">02</span><span class="folio folio--right">03</span></div>
+</section>
 
-        <div class="hero-collage" aria-label="Portfolio image placeholders">
-          <figure class="tv-frame">
-            <img src="assets/profile-quynh.jpeg" alt="Portrait of Quynh Pham">
-            <figcaption>Portfolio signal</figcaption>
-          </figure>
-          <div class="sticker sticker-one">research notes</div>
-          <div class="sticker sticker-two">Figma drafts</div>
-        </div>
-      </section>
+<section class="issue spread--fold" id="issue-1" aria-labelledby="issue-1-title">
+  <div class="grid issue__index">
+    <h2 id="issue-1-title" class="cell display display--issue" style="--c: 1 / span 6; --r: 1" aria-label="Issue 1: Illustration" data-fr-aria-label="Numéro 1 : Illustration" data-reveal>
+      <span class="display__line"><span class="script-cap">I</span><span class="type-cond">LLUs</span><span class="issue-pill"><span data-l="en" lang="en">Issue 1</span><span data-l="fr" lang="fr">Numéro 1</span></span></span>
+      <span class="display__line type-exp type-italic">tration</span>
+    </h2>
+    <div class="cell" style="--c: 8 / span 5; --r: 1; --mt: 1.5rem" data-reveal><a class="entry entry--reverse" href="projects/01-illustration/03-fresco-hat-boi/index.html"><span class="entry__text"><span class="entry__folio entry__folio--cond"><b>P.14</b> [14–15]</span><span class="entry__title"><span class="entry__num">(003)</span> FRESCO</span><span class="entry__sub" data-l="en" lang="en">Traditional Vietnamese Opera</span><span class="entry__sub" data-l="fr" lang="fr">Opéra traditionnel vietnamien</span></span><span class="arrow arrow--left arrow--bold" aria-hidden="true"></span><img src="projects/01-illustration/03-fresco-hat-boi/images/p08-1.jpg" width="2000" height="2000" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 1 / span 7; --r: 2; --mt: 2rem" data-reveal><a class="entry " href="projects/01-illustration/01-carre-hermes/index.html"><span class="entry__text"><span class="entry__folio"><b>P.06</b> [06–09]</span><span class="entry__title"><span class="entry__num">(001)</span> <span data-l="en" lang="en">“Carré Hermès” collection</span><span data-l="fr" lang="fr">Collection « Carré Hermès »</span></span><span class="entry__sub" data-l="en" lang="en">Vietnamese Folk Pattern</span><span class="entry__sub" data-l="fr" lang="fr">Motifs populaires vietnamiens</span><span class="entry__desc" data-l="en" lang="en">Inspiration from traditional Vietnamese architecture</span><span class="entry__desc" data-l="fr" lang="fr">Inspirés de l’architecture traditionnelle vietnamienne</span></span><span class="arrow " aria-hidden="true"></span><img src="projects/01-illustration/01-carre-hermes/images/p05-3.webp" width="1800" height="1785" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 7 / span 6; --r: 3; --js: end" data-reveal><a class="entry " href="projects/01-illustration/04-book-covers-vietnamese-stories/index.html"><span class="entry__text"><span class="entry__folio"><b>P.16</b> [16–19]</span><span class="entry__title"><span class="entry__num">(004)</span> <span data-l="en" lang="en">Traditional Vietnamese Stories</span><span data-l="fr" lang="fr">Contes traditionnels vietnamiens</span></span><span class="entry__sub" data-l="en" lang="en">Book Covers</span><span class="entry__sub" data-l="fr" lang="fr">Couvertures de livres</span></span><span class="arrow arrow--bold" aria-hidden="true"></span><img src="projects/01-illustration/04-book-covers-vietnamese-stories/images/p09-1.webp" width="1371" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 1 / span 6; --r: 3; --mt: 4rem" data-reveal><a class="entry entry--reverse" href="projects/01-illustration/02-comis-strip-mother-goddess/index.html"><span class="entry__text"><span class="entry__folio entry__folio--cond"><b>P.10</b> [10–13]</span><span class="entry__title"><span class="entry__num">(002)</span> Comis Strip</span><span class="entry__sub" data-l="en" lang="en">Mother Goddess Worship</span><span class="entry__sub" data-l="fr" lang="fr">Culte des Déesses-Mères</span><span class="entry__sub" data-l="en" lang="en">Vietnamese Folk Religion</span><span class="entry__sub" data-l="fr" lang="fr">Religion populaire vietnamienne</span></span><span class="arrow arrow--left" aria-hidden="true"></span><img src="projects/01-illustration/02-comis-strip-mother-goddess/images/p06-1.jpg" width="1545" height="2000" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 6 / span 7; --r: 4; --js: end" data-reveal><a class="entry entry--reverse" href="projects/01-illustration/05-tarot-freaky-folklore-monster/index.html"><span class="entry__text"><span class="entry__folio"><b>P.20</b> [20–21]</span><span class="entry__title"><span class="entry__num">(005)</span> Tarot</span><span class="entry__sub">Freaky Folklore Monster</span><span class="entry__desc" data-l="en" lang="en">Vietnamese Folk Tradition</span><span class="entry__desc" data-l="fr" lang="fr">Tradition populaire vietnamienne</span></span><span class="arrow arrow--long" aria-hidden="true"></span><img src="projects/01-illustration/05-tarot-freaky-folklore-monster/images/p11-1.webp" width="1624" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio">04</span><span class="folio-bar__strip"><span><span data-l="en" lang="en">Issue 01</span><span data-l="fr" lang="fr">Numéro 01</span></span><span>Illustration</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">05</span></div>
+</section>
 
-      <section class="section about-section" id="story" aria-labelledby="about-title">
-        <div class="section-label">About me</div>
-        <div class="about-collage" aria-hidden="true">
-          <img class="image-polaroid profile-photo" src="assets/profile-quynh.jpeg" alt="">
-          <div class="fake-image image-book">[Image: sketchbook]</div>
-          <div class="fake-image image-pattern">[Image: pattern study]</div>
-        </div>
-        <h2 id="about-title">
-          I'm a graphic design student inspired by visual culture, digital behavior, typography,
-          places, and everyday stories.
-        </h2>
-      </section>
+<section class="issue spread--fold" id="issue-2" aria-labelledby="issue-2-title">
+  <div class="grid issue__index">
+    <h2 id="issue-2-title" class="cell display display--issue" style="--c: 1 / span 7; --r: 1" aria-label="Issue 2: Graphic Design" data-fr-aria-label="Numéro 2 : Design graphique" data-reveal>
+      <span class="display__line" data-l="en" lang="en"><span class="script-cap">G</span><span class="type-cond">RAP</span><img src="assets/brand/phq-seal.svg" width="185" height="214" alt="" class="display__seal" loading="lazy" decoding="async"><span class="type-cond">IC</span></span><span class="display__line" data-l="fr" lang="fr"><span class="issue-pill" style="margin: 0 .5em 0 0">Numéro 2</span><span class="script-cap">D</span>esign</span>
+      <span class="display__line" data-l="en" lang="en"><span class="issue-pill" style="margin: 0 .5em 0 0">Issue 2</span><span class="script-cap">D</span>esign</span><span class="display__line" data-l="fr" lang="fr"><span class="script-cap">G</span><span class="type-cond">RAP</span><img src="assets/brand/phq-seal.svg" width="185" height="214" alt="" class="display__seal" loading="lazy" decoding="async"><span class="type-cond">IQUE</span></span>
+    </h2>
+    <div class="cell" style="--c: 8 / span 5; --r: 1; --mt: 1rem" data-reveal><a class="entry entry--reverse" href="projects/02-graphic-design/03-beyond-space-magazine/index.html"><span class="entry__text"><span class="entry__folio entry__folio--cond"><b>P.38</b> [38–43]</span><span class="entry__title"><span class="entry__num">(003)</span> <span data-l="en" lang="en">“Beyond Space” Magazine</span><span data-l="fr" lang="fr">Magazine « Beyond Space »</span></span><span class="entry__sub" data-l="en" lang="en">Editorial Design &amp; Art Direction</span><span class="entry__sub" data-l="fr" lang="fr">Design éditorial et direction artistique</span><span class="entry__desc" data-l="en" lang="en">Futuristic aesthetics &amp; Y2K</span><span class="entry__desc" data-l="fr" lang="fr">Esthétique futuriste et Y2K</span></span><span class="arrow arrow--left arrow--bold" aria-hidden="true"></span><img src="projects/02-graphic-design/03-beyond-space-magazine/images/p20-1.jpg" width="1445" height="2000" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 1 / span 6; --r: 2; --mt: 2rem" data-reveal><a class="entry " href="projects/02-graphic-design/01-gangnam-restaurant/index.html"><span class="entry__text"><span class="entry__folio"><b>P.24</b> [24–33]</span><span class="entry__title"><span class="entry__num">(001)</span> <span data-l="en" lang="en">“Gangnam Restaurant”</span><span data-l="fr" lang="fr">« Gangnam Restaurant »</span></span><span class="entry__sub" data-l="en" lang="en">Branding/Visual Identity</span><span class="entry__sub" data-l="fr" lang="fr">Branding / identité visuelle</span><span class="entry__desc" data-l="en" lang="en">Traditional Korean Inspiration</span><span class="entry__desc" data-l="fr" lang="fr">Inspiration coréenne traditionnelle</span></span><span class="arrow " aria-hidden="true"></span><img src="projects/02-graphic-design/01-gangnam-restaurant/images/p15-1.jpg" width="2000" height="1500" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 7 / span 6; --r: 2; --js: end" data-reveal><a class="entry " href="projects/02-graphic-design/04-forgotten-dreams-map/index.html"><span class="entry__text"><span class="entry__folio"><b>P.44</b></span><span class="entry__title"><span class="entry__num">(004)</span> <span data-l="en" lang="en">“Forgotten Dreams”</span><span data-l="fr" lang="fr">« Forgotten Dreams »</span></span><span class="entry__sub" data-l="en" lang="en">Cartography/Subjective Mapping</span><span class="entry__sub" data-l="fr" lang="fr">Cartographie subjective</span></span><span class="arrow " aria-hidden="true"></span><img src="projects/02-graphic-design/04-forgotten-dreams-map/images/p23-1.webp" width="1278" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 1 / span 6; --r: 3; --mt: 3rem" data-reveal><a class="entry entry--reverse" href="projects/02-graphic-design/02-passport-eunoia/index.html"><span class="entry__text"><span class="entry__folio entry__folio--cond"><b>P.34</b> [34–37]</span><span class="entry__title"><span class="entry__num">(002)</span> PASSPORT</span><span class="entry__sub" data-l="en" lang="en">Editorial Design</span><span class="entry__sub" data-l="fr" lang="fr">Design éditorial</span><span class="entry__sub" data-l="en" lang="en">&amp; Art Direction</span><span class="entry__sub" data-l="fr" lang="fr">et direction artistique</span></span><span class="arrow " aria-hidden="true"></span><img src="projects/02-graphic-design/02-passport-eunoia/images/p18-1.webp" width="1301" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 7 / span 6; --r: 3" data-reveal><a class="entry entry--reverse" href="projects/02-graphic-design/05-agent-orange-poster/index.html"><span class="entry__text"><span class="entry__folio"><b>P.45</b></span><span class="entry__title"><span class="entry__num">(005)</span> <span data-l="en" lang="en">“Agent Orange”</span><span data-l="fr" lang="fr">« Agent Orange »</span></span><span class="entry__sub" data-l="en" lang="en">Protest Poster</span><span class="entry__sub" data-l="fr" lang="fr">Affiche de protestation</span></span><span class="arrow arrow--short" aria-hidden="true"></span><img src="projects/02-graphic-design/05-agent-orange-poster/images/p23-2.webp" width="1253" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 6 / span 7; --r: 4; --js: end" data-reveal><a class="entry entry--reverse" href="projects/02-graphic-design/06-parasite-poster/index.html"><span class="entry__text"><span class="entry__folio"><b>P.46</b> [46–47]</span><span class="entry__title"><span class="entry__num">(006)</span> <span data-l="en" lang="en">Parasite film</span><span data-l="fr" lang="fr">Parasite, le film</span></span><span class="entry__sub" data-l="en" lang="en">Metaphor-based</span><span class="entry__sub" data-l="fr" lang="fr">Affiche métaphorique</span><span class="entry__sub" data-l="en" lang="en">&amp; Typography-based Poster</span><span class="entry__sub" data-l="fr" lang="fr">et typographique</span></span><span class="arrow arrow--long" aria-hidden="true"></span><img src="projects/02-graphic-design/06-parasite-poster/images/p24-2.jpg" width="1415" height="2000" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio">22</span><span class="folio-bar__strip"><span><span data-l="en" lang="en">Issue 02</span><span data-l="fr" lang="fr">Numéro 02</span></span><span><span data-l="en" lang="en">Graphic Design</span><span data-l="fr" lang="fr">Design graphique</span></span><span class="folio-bar__rule"></span></span><span class="folio folio--right">23</span></div>
+</section>
 
-      <section class="section work-section" id="work" aria-labelledby="work-title">
-        <div class="section-intro">
-          <p class="section-label">Featured work</p>
-          <h2 id="work-title">Case Studies</h2>
-          <p>
-            Inspired by printed dossiers and process boards: each project has space for concept,
-            artifact, UX logic, and a fake image placeholder until real exports are ready.
-          </p>
-        </div>
+<section class="issue spread--fold" id="issue-3" style="--accent: var(--magenta)" aria-labelledby="issue-3-title">
+  <div class="grid issue__index">
+    <h2 id="issue-3-title" class="cell display display--issue" style="--c: 1 / span 7; --r: 1" aria-label="Issue 3: Typography" data-fr-aria-label="Numéro 3 : Typographie" data-reveal>
+      <span class="display__line"><span class="script-cap">T</span><span class="type-cond">YPO-</span><span class="issue-pill"><span data-l="en" lang="en">Issue 3</span><span data-l="fr" lang="fr">Numéro 3</span></span></span>
+      <span class="display__line type-exp type-italic"><span data-l="en" lang="en">graphy</span><span data-l="fr" lang="fr">graphie</span></span>
+    </h2>
+    <p class="cell issue__kicker" style="--c: 7 / -1; --r: 2; --mt: 3rem" data-l="en" lang="en">EARTH, WIND, WATER &amp; FIRE: Modular typeface conception</p><p class="cell issue__kicker" style="--c: 7 / -1; --r: 2; --mt: 3rem" data-l="fr" lang="fr">TERRE, VENT, EAU &amp; FEU : conception d’une typographie modulaire</p>
+    <div class="cell" style="--c: 5 / -1; --r: 3; --js: end" data-reveal><a class="entry entry--reverse" href="projects/03-typography/01-bubble-cluster-typeface/index.html" style="--thumb-w: clamp(10rem, 4rem + 18vw, 22rem)"><span class="entry__text"><span class="entry__folio"><b>P.48</b> [48–53]</span><span class="entry__title"><span class="entry__num">(001)</span> <span data-l="en" lang="en">“Bubble Cluster” Modular Typeface</span><span data-l="fr" lang="fr">Typographie modulaire « Bubble Cluster »</span></span><span class="entry__desc" data-l="en" lang="en">Dreamy · Floating · Colorful · Organic</span><span class="entry__desc" data-l="fr" lang="fr">Onirique · Flottant · Coloré · Organique</span></span><span class="arrow arrow--left" aria-hidden="true"></span><img src="projects/03-typography/01-bubble-cluster-typeface/images/p27-1.jpg" width="2000" height="1244" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio-bar__strip"><span><span data-l="en" lang="en">Issue 03</span><span data-l="fr" lang="fr">Numéro 03</span></span><span><span data-l="en" lang="en">Typography</span><span data-l="fr" lang="fr">Typographie</span></span><span class="folio-bar__rule"></span></span></div>
+</section>
 
-        <article class="dossier" data-project-card="brand-system">
-          <div class="folder-back" aria-hidden="true"></div>
-          <div class="folder-front">
-            <div class="tab-label">_BRAND_01</div>
-            <div class="paper-sheet paper-main">
-              <p class="project-meta">001 / Brand identity</p>
-              <h3>Visual identity system</h3>
-              <p>
-                A brand world translated into typography, color, layout rules, packaging,
-                and campaign surfaces.
-              </p>
-              <button class="case-button" type="button" data-open-project="brand-system">
-                Case study <span aria-hidden="true">↳</span>
-              </button>
-            </div>
-            <div class="paper-sheet paper-side">
-              <div class="fake-image">[Image: brand mockup]</div>
-              <p>Logo rules / poster tests / packaging rhythm</p>
-            </div>
-            <div class="clip" aria-hidden="true"></div>
-          </div>
-        </article>
+<section class="issue spread--fold" id="issue-4" aria-labelledby="issue-4-title">
+  <div class="grid issue__index">
+    <h2 id="issue-4-title" class="cell display display--issue" style="--c: 1 / span 6; --r: 1" aria-label="Issue 4: UX-UI" data-fr-aria-label="Numéro 4 : UX-UI" data-reveal>
+      <span class="display__line"><span class="script-cap">U</span><span class="type-cond">X–</span><span class="issue-pill"><span data-l="en" lang="en">Issue 4</span><span data-l="fr" lang="fr">Numéro 4</span></span></span>
+      <span class="display__line type-exp type-italic">UI</span>
+    </h2>
+    <div class="cell" style="--c: 7 / -1; --r: 1 / span 2; --mt: 6rem; --js: end" data-reveal><a class="entry " href="projects/04-ux-ui/02-mid-autumn-festival/index.html"><span class="entry__text"><span class="entry__folio"><b>P.60</b> [60–63]</span><span class="entry__title"><span class="entry__num">(002)</span> <span data-l="en" lang="en">Event Identity – Mid-Autumn Festival</span><span data-l="fr" lang="fr">Identité événementielle – Mid-Autumn Festival</span></span><span class="entry__desc" data-l="en" lang="en">One-page website</span><span class="entry__desc" data-l="fr" lang="fr">Site one-page</span><span class="entry__desc" data-l="en" lang="en">UX/UI for a Festive, Cultural &amp; Magical Event</span><span class="entry__desc" data-l="fr" lang="fr">UX/UI pour un événement festif, culturel et magique</span></span><span class="arrow " aria-hidden="true"></span><img src="projects/04-ux-ui/02-mid-autumn-festival/images/p32-1.webp" width="838" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 1 / span 7; --r: 2; --mt: 2rem" data-reveal><a class="entry entry--reverse" href="projects/04-ux-ui/01-britanica-type-specimen/index.html"><span class="entry__text"><span class="entry__folio entry__folio--cond"><b>P.56</b> [56–59]</span><span class="entry__title"><span class="entry__num">(001)</span> <span data-l="en" lang="en">Type Specimen Website – Britanica Font Family</span><span data-l="fr" lang="fr">Site spécimen – famille Britanica</span></span><span class="entry__desc" data-l="en" lang="en">Responsive &amp; Interactive Design</span><span class="entry__desc" data-l="fr" lang="fr">Design responsive et interactif</span><span class="entry__desc" data-l="en" lang="en">Urban, Modern, Industrial Aesthetic</span><span class="entry__desc" data-l="fr" lang="fr">Esthétique urbaine, moderne et industrielle</span></span><span class="arrow arrow--left" aria-hidden="true"></span><img src="projects/04-ux-ui/01-britanica-type-specimen/images/p30-1.webp" width="967" height="1800" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio">54</span><span class="folio-bar__strip"><span><span data-l="en" lang="en">Issue 04</span><span data-l="fr" lang="fr">Numéro 04</span></span><span>UX-UI</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">55</span></div>
+</section>
 
-        <div class="project-list" aria-label="Project index">
-          <article class="project-row" data-project-card="mobile-app">
-            <span>002</span>
-            <button type="button" data-open-project="mobile-app">Mobile product concept</button>
-            <div class="fake-image">[Image: mobile UI screens]</div>
-          </article>
-          <article class="project-row" data-project-card="editorial-system">
-            <span>003</span>
-            <button type="button" data-open-project="editorial-system">Typography and layout study</button>
-            <div class="fake-image">[Image: editorial spreads]</div>
-          </article>
-          <article class="project-row" data-project-card="service-touchpoints">
-            <span>004</span>
-            <button type="button" data-open-project="service-touchpoints">Service touchpoint system</button>
-            <div class="fake-image">[Image: journey map]</div>
-          </article>
-        </div>
-      </section>
+<section class="issue spread--fold" id="issue-5" aria-labelledby="issue-5-title">
+  <div class="grid issue__index">
+    <h2 id="issue-5-title" class="cell display display--issue" style="--c: 1 / span 6; --r: 1" aria-label="Issue 5: Photography" data-fr-aria-label="Numéro 5 : Photographie" data-reveal>
+      <span class="display__line"><span class="script-cap">P</span><span class="type-cond">HOTO</span><span class="issue-pill"><span data-l="en" lang="en">Issue 5</span><span data-l="fr" lang="fr">Numéro 5</span></span></span>
+      <span class="display__line type-exp type-italic"><span data-l="en" lang="en">graphy</span><span data-l="fr" lang="fr">graphie</span></span>
+    </h2>
+    <div class="cell" style="--c: 7 / -1; --r: 1; --mt: 1rem" data-reveal><a class="entry entry--reverse" href="projects/05-photography/02-autumn-theme/index.html"><span class="entry__text"><span class="entry__folio"><b>P.72</b> [72–73]</span><span class="entry__title"><span class="entry__num">(002)</span> Autumn Theme</span></span><span class="arrow arrow--long" aria-hidden="true"></span><img src="projects/05-photography/02-autumn-theme/images/p37-7.jpg" width="1318" height="2000" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 1 / span 6; --r: 2; --mt: 2rem" data-reveal><a class="entry " href="projects/05-photography/01-cubism-portrait/index.html"><span class="entry__text"><span class="entry__folio"><b>P.66</b> [66–71]</span><span class="entry__title"><span class="entry__num">(001)</span> <span data-l="en" lang="en">“Cubism” portrait</span><span data-l="fr" lang="fr">Portrait « Cubism »</span></span></span><span class="arrow " aria-hidden="true"></span><img src="projects/05-photography/01-cubism-portrait/images/p34-1.jpg" width="1591" height="2000" alt="" class="entry__thumb entry__thumb--invert" loading="lazy" decoding="async"></a></div>
+    <div class="cell" style="--c: 6 / span 7; --r: 3; --js: end" data-reveal><a class="entry entry--reverse" href="projects/05-photography/03-color-grading/index.html"><span class="entry__text"><span class="entry__folio entry__folio--cond"><b>P.74</b> [74–75]</span><span class="entry__title"><span class="entry__num">(003)</span> Color Grading</span></span><span class="arrow arrow--left" aria-hidden="true"></span><img src="projects/05-photography/03-color-grading/images/p38-3.jpg" width="1325" height="2000" alt="" class="entry__thumb" loading="lazy" decoding="async"></a></div>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio">64</span><span class="folio-bar__strip"><span><span data-l="en" lang="en">Issue 05</span><span data-l="fr" lang="fr">Numéro 05</span></span><span><span data-l="en" lang="en">Photography</span><span data-l="fr" lang="fr">Photographie</span></span><span class="folio-bar__rule"></span></span><span class="folio folio--right">65</span></div>
+</section>
 
-      <section class="section approach-section" id="approach" aria-labelledby="approach-title">
-        <p class="section-label">Process</p>
-        <h2 id="approach-title">Frame, systemize, prototype, reflect.</h2>
-        <div class="process-grid">
-          <article>
-            <span>01</span>
-            <h3>Frame</h3>
-            <p>Audience, problem, context, visual references, and constraints.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>System</h3>
-            <p>Typography, grid, color, visual language, and reusable decisions.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Prototype</h3>
-            <p>Wireframes, interaction states, Figma flows, and usability notes.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Reflect</h3>
-            <p>What changed, what worked, what failed, and what the next version needs.</p>
-          </article>
-        </div>
-      </section>
+<section class="spread spread--dark contact" id="contact" aria-labelledby="contact-title" style="--spread-h: auto">
+  <div class="spread__body grid" style="padding-block: var(--space-6)">
+    <h2 id="contact-title" class="cell display display--issue" style="--c: 1 / span 8; --r: 1" data-reveal>
+      <span class="display__line"><span class="script-cap">C</span><span class="type-cond">ONTACT</span></span>
+    </h2>
+    <div class="cell" style="--c: 10 / -1; --r: 1; --as: end; --js: end"><img src="assets/brand/phq-seal.svg" width="185" height="214" alt="PHQ seal logo" data-fr-alt="Logo sceau PHQ" class="contact__seal" loading="lazy" decoding="async"></div>
+    <div class="cell" style="--c: 1 / -1; --r: 2">
+      <a class="contact__email" href="mailto:Quynhpham261097@gmail.com">Quynhpham261097@gmail.com</a>
+    </div>
+    <ul class="cell meta-list" style="--c: 1 / span 6; --r: 3" aria-label="Disciplines">
+      <li data-l="en" lang="en">Graphic Design</li><li data-l="fr" lang="fr">Design graphique</li><li>Illustration</li><li data-l="en" lang="en">Photography</li><li data-l="fr" lang="fr">Photographie</li><li>UX-UI</li>
+    </ul>
+  </div>
+  <div class="folio-bar" aria-hidden="true"><span class="folio">76</span><span class="folio-bar__strip"><span>PHAM Nhu Quynh</span><span>Portfolio 2024/2025</span><span class="folio-bar__rule"></span></span><span class="folio folio--right">77</span></div>
+</section>
+</main>
 
-      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
-        <h2 id="experience-title">Experience</h2>
-        <div class="experience-table">
-          <article class="education-row">
-            <span class="school-logo school-logo-lisaa" aria-label="LISAA logo">LISAA</span>
-            <h3>
-              LISAA - L'Institut Superieur des Arts Appliques.
-              <small>Bachelor's degree, Graphic Design</small>
-            </h3>
-            <p>
-              Sep 2023 - Jun 2026. Studying graphic design through typography, editorial systems,
-              brand identity, visual research, UI foundations, Figma workflows, and portfolio-ready
-              case study presentation.
-            </p>
-          </article>
-          <article class="education-row">
-            <span class="school-logo school-logo-vnuf" aria-label="VNUF logo">VNUF</span>
-            <h3>
-              Vietnam National University of Forestry (VNUF)
-              <small>Bachelor's degree, Natural Resources Management</small>
-            </h3>
-            <p>
-              Sep 2015 - Feb 2020. Built a foundation in environmental systems, resource analysis,
-              research thinking, field observation, and structured problem solving before moving into
-              visual communication and UX/UI design.
-            </p>
-          </article>
-        </div>
-      </section>
+<footer class="site-footer">
+  <img class="site-footer__signature" src="assets/brand/signature.svg" width="261" height="106" alt="Signature of PHAM Nhu Quynh" data-fr-alt="Signature de PHAM Nhu Quynh" loading="lazy" decoding="async">
+  <div class="site-footer__bottom"><span>© 2025 PHAM Nhu Quynh — <span data-l="en" lang="en">Graphic Design Portfolio</span><span data-l="fr" lang="fr">Portfolio de design graphique</span></span><a href="#top"><span data-l="en" lang="en">Back to top</span><span data-l="fr" lang="fr">Haut de page</span> ↑</a></div>
+</footer>
 
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <p class="section-label">Contact</p>
-        <h2 id="contact-title">Let's turn the next project into a strong case study.</h2>
-        <div class="contact-links">
-          <a class="button button-primary" href="mailto:your.email@example.com">Email</a>
-          <a class="button" href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma</a>
-          <a class="button" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </section>
-    </main>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" data-fr-aria-label="Visionneuse d’images" hidden>
+  <span class="lightbox__count" aria-hidden="true"></span>
+  <button class="lightbox__close" type="button"><span data-l="en" lang="en">Close</span><span data-l="fr" lang="fr">Fermer</span></button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image" data-fr-aria-label="Image précédente"><span class="arrow arrow--left" aria-hidden="true"></span></button>
+  <figure class="lightbox__figure"><img class="lightbox__img" alt=""><figcaption class="lightbox__caption" aria-live="polite"></figcaption></figure>
+  <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image" data-fr-aria-label="Image suivante"><span class="arrow" aria-hidden="true"></span></button>
+</div>
 
-    <footer class="site-footer">
-      <p>© <span data-year></span> Quynh Pham. Portfolio in progress.</p>
-      <a href="#top">Back to top ↑</a>
-    </footer>
-
-    <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
-      <form method="dialog">
-        <button class="dialog-close" type="submit" aria-label="Close project study">×</button>
-      </form>
-      <div class="dialog-content">
-        <p class="project-meta" data-dialog-meta></p>
-        <h2 id="dialog-title" data-dialog-title></h2>
-        <p data-dialog-summary></p>
-        <div class="dialog-grid">
-          <section aria-labelledby="dialog-challenge-title">
-            <h3 id="dialog-challenge-title">Challenge</h3>
-            <p data-dialog-challenge></p>
-          </section>
-          <section aria-labelledby="dialog-process-title">
-            <h3 id="dialog-process-title">Process</h3>
-            <p data-dialog-process></p>
-          </section>
-          <section aria-labelledby="dialog-next-title">
-            <h3 id="dialog-next-title">Next step</h3>
-            <p data-dialog-next></p>
-          </section>
-        </div>
-      </div>
-    </dialog>
-
-    <script src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
